@@ -22,9 +22,6 @@ Before building the site, the layout and visual style were planned using Figma, 
 
 **Images**
 
-![Desktop View](./images/Desktop-view.png)
-![Tablet View](./images/Tablet-view.png)
-![Mobile View](./images/Mobile-view.png)
 **Technologies Used**:
 
 HTML5 – Structure and content
