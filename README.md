@@ -22,8 +22,6 @@ Before building the site, the layout and visual style were planned using Figma, 
 
 **Images**
 
-![Demo of Feature](./images/Screen%20Recording%202025-08-10%20at%208.42.33%20PM.gif)
-
 ![Desktop View](./images/Desktop-view.png)
 ![Tablet View](./images/Tablet-view.png)
 ![Mobile View](./images/Mobile-view.png)
