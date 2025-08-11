@@ -1,21 +1,34 @@
 # Project 3: Spots
 
-### Overview  
+### Overview
 
-* Intro  
-* Figma  
-* Images  
-  
+Sick Spots Gallery is a responsive website where users can share and discover unique places they’ve visited. It’s designed to be visually engaging and easy to use on any device, with a layout that adapts smoothly from 320px to 1440px screen widths.
+
 **Intro**
-  
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
-  
-**Figma**  
-  
-* [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
-  
-**Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
+
+Sick Spots Gallery allows travelers and explorers to showcase their favorite destinations by uploading a single photo for each location and adding a description. Each submission can contain:
+
+Name of the contributor
+
+Description of the spot
+
+One photo with a caption of the location
+
+Visitors can like photos they enjoy, helping highlight the most recommended places.
+
+Before building the site, the layout and visual style were planned using Figma, allowing for a clear design blueprint before development began. This made it easier to ensure the site’s look, feel, and responsive behavior worked consistently across different devices.
+
+**Images**
+
+![Demo of Feature](./images/Screen%20Recording%202025-08-10%20at%208.42.33%20PM.gif)
+
+![Desktop View](./images/Desktop-view.png)
+![Tablet View](./images/Tablet-view.png)
+![Mobile View](./images/Mobile-view.png)
+**Technologies Used**:
+
+HTML5 – Structure and content
+
+CSS3 – Styling and responsiveness
+
+Figma – Wireframing and layout design

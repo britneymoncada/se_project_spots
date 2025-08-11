@@ -16,14 +16,147 @@
     <link rel="stylesheet" href="/pages/index.css" />
     <link rel="favicon" href="/favicon.ico" />
   </head>
-  <body>
-    <div class="page">
-      <header class="header">some</header>
-      <main class="content">
-        <section class="profile"></section>
-        <section class="cards"></section>
-      </main>
-      <footer class="footer"></footer>
-    </div>
+  <body class="page">
+    <header class="header">
+      <img src="./images/Logo.svg" alt="header logo" class="header__logo" />
+    </header>
+    <main class="content">
+      <section class="profile">
+        <img
+          src="./images/Avatar.svg"
+          alt="header avatar"
+          class="profile__avatar"
+        />
+        <div class="profile__column">
+          <h1 class="profile__name">Bessie Coleman</h1>
+          <p class="profile__description">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed quidem
+            labore id eos fugiat fugit corrupti deserunt. Eos qui possimus
+            officiis sequi fugiat voluptatibus quis. Fuga est, eos pariatur
+            dolorem placeat delectus facilis voluptas aperiam doloribus impedit
+            dolor necessitatibus corrupti temporibus fugiat provident rerum
+            unde, eius, quis veritatis nihil? Reiciendis?
+          </p>
+          <button class="profile__edit-button" type="button">
+            <img src="./images/Pencil-icon.svg" alt="edit profile button" />
+            <span class="profile__edit-text"> Edit Profile</span>
+          </button>
+        </div>
+        <button class="profile__post-button">
+          <img
+            src="./images/Plus-icon.svg"
+            alt="new post button"
+            class="profile__post-button profile__post-button_plus"
+          />New Post
+        </button>
+      </section>
+      <section class="cards">
+        <ul class="cards__list">
+          <li class="card">
+            <img
+              src="./images/Card1.svg"
+              alt="Val Thorens"
+              class="card__image"
+            />
+            <div class="card__caption">
+              <div class="card__name">Val Thorens</div>
+              <button type="button" class="card__like-button">
+                <img
+                  src="./images/heart-icon.svg"
+                  alt="like button"
+                  class="card__heart"
+                />
+              </button>
+            </div>
+          </li>
+          <li class="card">
+            <img
+              src="./images/Card2.svg"
+              alt="Val Thorens"
+              class="card__image"
+            />
+            <div class="card__caption">
+              <div class="card__name">Restaurant terrace</div>
+              <button type="button" class="card__like-button">
+                <img
+                  src="./images/heart-icon.svg"
+                  alt="like button"
+                  class="card__heart"
+                />
+              </button>
+            </div>
+          </li>
+          <li class="card">
+            <img
+              src="./images/Card3.svg"
+              alt="Val Thorens"
+              class="card__image"
+            />
+            <div class="card__caption">
+              <div class="card__name">An outdoor cafe</div>
+              <button type="button" class="card__like-button">
+                <img
+                  src="./images/heart-icon.svg"
+                  alt="like button"
+                  class="card__heart"
+                />
+              </button>
+            </div>
+          </li>
+          <li class="card">
+            <img
+              src="./images/Card4.svg"
+              alt="Val Thorens"
+              class="card__image"
+            />
+            <div class="card__caption">
+              <div class="card__name">A very long bridge in the forest...</div>
+              <button type="button" class="card__like-button">
+                <img
+                  src="./images/heart-icon.svg"
+                  alt="like button"
+                  class="card__heart"
+                />
+              </button>
+            </div>
+          </li>
+          <li class="card">
+            <img
+              src="./images/Card5.svg"
+              alt="Val Thorens"
+              class="card__image"
+            />
+            <div class="card__caption">
+              <div class="card__name">Tunnel with morning light</div>
+              <button type="button" class="card__like-button">
+                <img
+                  src="./images/heart-icon.svg"
+                  alt="like button"
+                  class="card__heart"
+                />
+              </button>
+            </div>
+          </li>
+          <li class="card">
+            <img
+              src="./images/Card6.svg"
+              alt="Val Thorens"
+              class="card__image"
+            />
+            <div class="card__caption">
+              <div class="card__name">Mountain House</div>
+              <button type="button" class="card__like-button">
+                <img
+                  src="./images/heart-icon.svg"
+                  alt="like button"
+                  class="card__heart"
+                />
+              </button>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer">2023 © Spots</footer>
   </body>
 </html>
