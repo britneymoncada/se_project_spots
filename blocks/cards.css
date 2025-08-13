@@ -1,19 +1,16 @@
 .cards__list {
-  display: inline-grid;
+  display: grid;
   grid-template-columns: repeat(auto-fit, 413px);
   gap: 40px 20px;
-  max-width: 1280px;
-  width: 100%;
   padding: 20px 0 40px;
   margin: 0;
-  padding-left: 0;
   justify-content: center;
   border-bottom: solid rgba(33, 33, 33, 0.4) 1px;
 }
 
 @media screen and (max-width: 629px) {
   .cards__list {
-    grid-auto-columns: reoeat(auto-fit, 288px);
+    grid-auto-columns: repeat(auto-fit, 288px);
     padding-bottom: 20px;
     gap: 20px;
   }

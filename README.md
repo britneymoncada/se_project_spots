@@ -29,3 +29,7 @@ HTML5 – Structure and content
 CSS3 – Styling and responsiveness
 
 Figma – Wireframing and layout design
+
+VIDEO REFLECTION:
+
+https://drive.google.com/file/d/1siDm_nzXQm7Rr3bXi4B3EpTHwk48KZJT/view?usp=drive_link

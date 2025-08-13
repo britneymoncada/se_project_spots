@@ -10,7 +10,7 @@
   height: 413px;
   padding-bottom: 12px;
   display: block;
-  border-radius: 16px;
+  border-radius: 8px;
 }
 
 .card__name {
@@ -48,12 +48,11 @@
 @media screen and (max-width: 629px) {
   .card {
     width: 288px;
-    padding-bottom: 20px;
   }
 
   .card__name {
     max-width: 235px;
-    max-height: 120%;
+    line-height: 120%;
     font-size: 16px;
   }
 
