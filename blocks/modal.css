@@ -9,7 +9,7 @@
   background-color: rgba(33, 33, 33, 0.4);
 }
 
-.modal__is-opened {
+.modal_is-opened {
   visibility: visible;
 }
 
@@ -48,6 +48,7 @@
   width: 50px;
   height: 50px;
   padding: 0 0 24px 0;
+  cursor: pointer;
 }
 
 .modal__label {
@@ -79,4 +80,5 @@
   color: rgba(252, 245, 229, 1);
   font-size: 16px;
   font-weight: 500;
+  cursor: pointer;
 }
