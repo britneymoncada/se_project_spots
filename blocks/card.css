@@ -39,6 +39,7 @@
   height: 20px;
   opacity: 0.4;
   background-image: url(../images/heart-icon.svg);
+  cursor: pointer;
 }
 
 .card__like-button:hover {

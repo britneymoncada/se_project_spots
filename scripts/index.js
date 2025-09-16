@@ -15,6 +15,7 @@ const newPostForm = newPostModal.querySelector(".modal__form");
 const imageLink = newPostForm.querySelector("#url");
 const imageCaption = newPostForm.querySelector("#caption-text");
 const newPostSaveBtn = newPostModal.querySelector(".modal__save-button");
+const newPostCloseBtn = newPostModal.querySelector(".modal__close-button");
 
 editProfileBtn.addEventListener("click", function () {
   editProfileModal.classList.add("modal_is-opened");
@@ -43,9 +44,10 @@ newPostBtn.addEventListener("click", function () {
 
 function handleNewCardPost(evt) {
   evt.preventDefault();
-  console.log(imageLink);
-  console.log(imageCaption);
+  console.log(imageLink.value);
+  console.log(imageCaption.value);
   newPostModal.classList.remove("modal_is-opened");
 }
 
-newPostSaveBtn.addEventListener("submit", handleNewCardPost(evt));
+newPostSaveBtn.addEventListener("submit", handleNewCardPost);
+newPostCloseBtn.addEventListener("click", handleNewCardPost);
