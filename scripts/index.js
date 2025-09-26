@@ -1,3 +1,35 @@
+const initialCards = [
+  {
+    name: "Place name here",
+    link: "https://image-url-here.jpg",
+  },
+
+  {
+    name: "Another place name",
+    link: "https://another-image-url.jpg",
+  },
+
+  {
+    name: "Another place name",
+    link: "https://another-image-url.jpg",
+  },
+
+  {
+    name: "Another place name",
+    link: "https://another-image-url.jpg",
+  },
+
+  {
+    name: "Another place name",
+    link: "https://another-image-url.jpg",
+  },
+
+  {
+    name: "Another place name",
+    link: "https://another-image-url.jpg",
+  },
+];
+
 const editProfileBtn = document.querySelector(".profile__edit-button");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileForm = editProfileModal.querySelector(".modal__form");
@@ -63,4 +95,8 @@ newPostForm.addEventListener("submit", (evt) => {
 
 newPostCloseBtn.addEventListener("click", () => {
   closeModal(newPostModal);
+});
+
+initialCards.forEach(function (card) {
+  console.log(card.name);
 });
