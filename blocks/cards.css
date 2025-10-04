@@ -8,7 +8,7 @@
   border-bottom: solid rgba(33, 33, 33, 0.4) 1px;
 }
 
-@media screen and (max-width: 629px) {
+@media screen and (max-width: 627px) {
   .cards__list {
     grid-template-columns: repeat(auto-fit, 288px);
     padding-bottom: 20px;

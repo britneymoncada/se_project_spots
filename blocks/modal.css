@@ -98,7 +98,7 @@
 }
 
 .modal__save-button:hover {
-  opacity: 0.5s;
+  transition: opacity 0.5s;
 }
 
 .modal__preview-container {
@@ -129,7 +129,7 @@
   background-image: url(../images/close-hover-preview.png);
 }
 
-@media screen and (max-width: 675px) {
+@media screen and (max-width: 668px) {
   .modal__container {
     margin: 10px;
     padding: 22px 12px 12px;

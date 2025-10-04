@@ -42,7 +42,7 @@
   color: #212121;
   opacity: 70%;
   width: 100%;
-  white-space: wrap;
+  white-space: normal;
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -91,20 +91,6 @@
 
 .profile__plus {
   margin-right: 8px;
-}
-
-@media screen and (max-width: 668px) {
-  .profile__post-button {
-    width: 100%;
-  }
-
-  .profile__name {
-    font-size: 28px;
-  }
-
-  .profile__description {
-    font-size: 20px;
-  }
 }
 
 @media screen and (max-width: 629px) {
