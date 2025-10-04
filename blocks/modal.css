@@ -59,7 +59,8 @@
 }
 
 .modal__close-button:hover {
-  opacity: 0.3s;
+  background-image: url(../images/close-btn-hover.png);
+  opacity: 1;
 }
 
 .modal__label {
@@ -100,6 +101,34 @@
   opacity: 0.5s;
 }
 
+.modal__preview-container {
+  position: relative;
+}
+
+.modal__link {
+  max-width: 80vw;
+  max-height: 80vh;
+}
+
+.modal__preview-close {
+  background-image: url(../images/close-preview.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: calc(100% + 12.5px);
+}
+
+.modal__preview-close:hover {
+  background-image: url(../images/close-hover-preview.png);
+}
+
 @media screen and (max-width: 675px) {
   .modal__container {
     margin: 10px;
@@ -115,5 +144,15 @@
 
   .modal__input {
     font-size: 16px;
+  }
+
+  /* .modal__link {
+    max-width: 288px;
+  } */
+}
+
+@media screen and (max-width: 360px) {
+  .modal__link {
+    max-width: 288px;
   }
 }

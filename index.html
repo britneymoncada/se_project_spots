@@ -52,76 +52,24 @@
       </section>
       <section class="cards page__section">
         <ul class="cards__list">
-          <li class="card">
-            <img
-              src="./images/Card1.jpg"
-              alt="Val Thorens"
-              class="card__image"
-            />
-            <div class="card__caption">
-              <h2 class="card__name">Val Thorens</h2>
-              <button type="button" class="card__like-button"></button>
-            </div>
-          </li>
-          <li class="card">
-            <img
-              src="./images/Card2.jpg"
-              alt="Val Thorens"
-              class="card__image"
-            />
-            <div class="card__caption">
-              <h2 class="card__name">Restaurant terrace</h2>
+          <template id="card-template">
+            <li class="card">
+              <img class="card__image" />
               <button
+                class="card__delete-btn"
                 type="button"
-                class="card__like-button"
-                aria-label="Like card"
+                aria-label="card delete button"
               ></button>
-            </div>
-          </li>
-          <li class="card">
-            <img
-              src="./images/Card3.jpg"
-              alt="Val Thorens"
-              class="card__image"
-            />
-            <div class="card__caption">
-              <h2 class="card__name">An outdoor cafe</h2>
-              <button type="button" class="card__like-button"></button>
-            </div>
-          </li>
-          <li class="card">
-            <img
-              src="./images/Card4.jpg"
-              alt="Val Thorens"
-              class="card__image"
-            />
-            <div class="card__caption">
-              <h2 class="card__name">A very long bridge in the forest...</h2>
-              <button type="button" class="card__like-button"></button>
-            </div>
-          </li>
-          <li class="card">
-            <img
-              src="./images/Card5.jpg"
-              alt="Val Thorens"
-              class="card__image"
-            />
-            <div class="card__caption">
-              <h2 class="card__name">Tunnel with morning light</h2>
-              <button type="button" class="card__like-button"></button>
-            </div>
-          </li>
-          <li class="card">
-            <img
-              src="./images/Card6.jpg"
-              alt="Val Thorens"
-              class="card__image"
-            />
-            <div class="card__caption">
-              <h2 class="card__name">Mountain House</h2>
-              <button type="button" class="card__like-button"></button>
-            </div>
-          </li>
+              <div class="card__caption">
+                <h2 class="card__name"></h2>
+                <button
+                  type="button"
+                  class="card__like-button"
+                  aria-label="card like button"
+                ></button>
+              </div>
+            </li>
+          </template>
         </ul>
       </section>
     </main>
@@ -192,6 +140,15 @@
         </form>
       </div>
     </div>
+
+    <div class="modal" id="modal__card-preview">
+      <div class="modal__preview-container">
+        <button class="modal__preview-close"></button>
+        <img class="modal__link" alt="close button" />
+        <div class="modal__caption">caption text</div>
+      </div>
+    </div>
+
     <script src="./scripts/index.js"></script>
   </body>
 </html>

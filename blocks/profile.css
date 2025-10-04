@@ -93,6 +93,20 @@
   margin-right: 8px;
 }
 
+@media screen and (max-width: 668px) {
+  .profile__post-button {
+    width: 100%;
+  }
+
+  .profile__name {
+    font-size: 28px;
+  }
+
+  .profile__description {
+    font-size: 20px;
+  }
+}
+
 @media screen and (max-width: 629px) {
   .profile {
     flex-direction: column;
@@ -116,6 +130,7 @@
   .profile__description {
     margin-bottom: 32px;
     max-width: 288px;
+    font-size: 16px;
   }
 
   .profile__column {
