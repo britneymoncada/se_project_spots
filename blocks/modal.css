@@ -108,6 +108,18 @@
 .modal__link {
   max-width: 80vw;
   max-height: 80vh;
+  border-radius: 8px;
+}
+
+.modal__caption {
+  background-color: #212121;
+  color: white;
+  border-radius: 8px;
+  width: 100%;
+  width: fit-content;
+  padding: 8px;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .modal__preview-close {
@@ -146,9 +158,9 @@
     font-size: 16px;
   }
 
-  /* .modal__link {
+  .modal__link {
     max-width: 288px;
-  } */
+  }
 }
 
 @media screen and (max-width: 360px) {

@@ -120,14 +120,14 @@ editProfileBtn.addEventListener("click", () => {
   editProfileDescriptionInput.value = profileDescription.textContent;
 });
 
-function EditProfileSubmit() {
+function editProfileSubmit() {
   profileName.textContent = editProfileNameInput.value;
   profileDescription.textContent = editProfileDescriptionInput.value;
 }
 
 editProfileForm.addEventListener("submit", (evt) => {
   evt.preventDefault();
-  EditProfileSubmit();
+  editProfileSubmit();
   closeModal(editProfileModal);
 });
 
