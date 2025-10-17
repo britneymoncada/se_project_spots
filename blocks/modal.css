@@ -94,7 +94,7 @@
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 500;
-  margin-top: 8px;
+  margin-bottom: 32px;
   line-height: 110%;
   padding: 0;
 }
@@ -181,6 +181,7 @@
 
   .modal__input {
     font-size: 16px;
+    margin-bottom: 8px;
   }
 
   .modal__link {
