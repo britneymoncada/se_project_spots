@@ -87,7 +87,7 @@ const editProfileInputs = Array.from(
 );
 const newPostInputs = Array.from(newPostForm.querySelectorAll(".modal__input"));
 
-/*---------- VALIDATION ITEMS -----------*/
+/*---------- START VALIDATION  -----------*/
 
 const settings = {
   formSelector: ".modal__form",
@@ -98,29 +98,24 @@ const settings = {
   errorClass: "modal__error_visible",
 };
 
-/*---------- START VALIDATION  -----------*/
+let isEscListenerActive = false;
 
 enableValidation(settings);
+
+function handleEscKey(evt) {
+  if (evt.key !== "Escape") return;
+  const openModalElement = document.querySelector(".modal_opened");
+  if (openModalElement) closeModal(openModalElement);
+}
 
 // ==== 3. UTILITY FUNCTIONS ==== //
 
 /* --------- REUSABLE OPEN & CLOSE MODALS --------- */
 
-let isEscListenerActive = false;
-
-function handleEscKey(evt) {
-  if (evt.key !== "Escape") return;
-  const openModalElement = document.querySelector(".modal_opened");
-  if (openModalElement) {
-    closeModal(openModalElement);
-  }
-}
-
 function openModal(modal) {
   modal.classList.add("modal_opened");
 
   /* --------- ADD ESC LISTENER - 1ST TIME CLICKED --------- */
-  let isEscListenerActive = false;
 
   if (!isEscListenerActive) {
     document.addEventListener("keydown", handleEscKey);
@@ -147,6 +142,7 @@ document.querySelectorAll(".modal").forEach((modal) => {
     }
   });
 });
+
 // ==== 4. FEATURE-SPECIFIC FUNCTIONS ==== //
 
 /* ------------ UPDATE CARDS FUNCTION ------------- */
@@ -212,7 +208,8 @@ editProfileBtn.addEventListener("click", () => {
   editProfileDescriptionInput.value = profileDescription.textContent;
   toggleButtonState(
     editProfileInputs,
-    editProfileForm.querySelector(".modal__save-button")
+    editProfileForm.querySelector(".modal__save-button"),
+    settings
   );
 });
 
@@ -226,16 +223,19 @@ editProfileCloseBtn.addEventListener("click", () => {
   closeModal(editProfileModal);
   toggleButtonState(
     editProfileInputs,
-    editProfileForm.querySelector(".modal__save-button")
+    editProfileForm.querySelector(".modal__save-button"),
+    settings
   );
-  editProfileInputs.forEach((input) => hideInputError(editProfileForm, input));
+  editProfileInputs.forEach((input) =>
+    hideInputError(editProfileForm, input, settings)
+  );
 });
 
 /*----------- NEW POST MODAL OPEN/CLOSE/SUBMIT -------- */
 
 newPostBtn.addEventListener("click", (evt) => {
   newCardPost(evt);
-  toggleButtonState(newPostInputs, newPostSaveBtn);
+  toggleButtonState(newPostInputs, newPostSaveBtn, settings);
 });
 
 newPostForm.addEventListener("submit", (evt) => {
@@ -253,14 +253,13 @@ newPostForm.addEventListener("submit", (evt) => {
   cardsContainer.prepend(newCard);
 
   newPostForm.reset();
+  toggleButtonState(newPostInputs, newPostSaveBtn, settings);
   closeModal(newPostModal);
 });
 
 newPostCloseBtn.addEventListener("click", () => {
   closeModal(newPostModal);
-  newPostForm.reset();
-  toggleButtonState(newPostInputs, newPostSaveBtn);
-  newPostInputs.forEach((input) => hideInputError(newPostForm, input));
+  toggleButtonState(newPostInputs, newPostSaveBtn, settings);
 });
 
 // ==== 6. INITIAL RENDERING ==== //
