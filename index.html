@@ -21,6 +21,8 @@
       <img src="./images/Logo.svg" alt="header logo" class="header__logo" />
     </header>
     <main class="content">
+      <!-- STARTING PROFILE PIC & DESCRIPTION -->
+
       <section class="profile page__section">
         <img
           src="./images/Avatar.svg"
@@ -37,6 +39,9 @@
             dolor necessitatibus corrupti temporibus fugiat provident rerum
             unde, eius, quis veritatis nihil? Reiciendis?
           </p>
+
+          <!-- EDIT PROFILE & NEW POST BUTTONS -->
+
           <button class="profile__edit-button" type="button">
             <img src="./images/Pencil-icon.svg" alt="edit profile button" />
             Edit Profile
@@ -49,6 +54,8 @@
             class="profile__plus"
           />New Post
         </button>
+
+        <!-- STARTING CARD CONTAINER + LIKE BUTTON -->
       </section>
       <section class="cards page__section">
         <ul class="cards__list">
@@ -77,6 +84,8 @@
       <p class="footer__text">2025 © Spots</p>
     </footer>
 
+    <!-- NEW POST MODAL -->
+
     <div
       class="modal"
       id="new-post-modal"
@@ -97,19 +106,31 @@
               id="url"
               placeholder="Paste a link to the picture"
               class="modal__input"
+              required
             />
+
+            <span class="url-error modal__input-error"></span>
+
             <label for="caption-text" class="modal__label">Caption</label>
             <input
               type="text"
               id="caption-text"
               placeholder="Type your caption"
               class="modal__input"
+              required
+              minlength="2"
+              maxlength="30"
             />
+
+            <span class="caption-text-error modal__input-error"></span>
+
             <button class="modal__save-button" type="submit">Save</button>
           </div>
         </form>
       </div>
     </div>
+
+    <!-- EDIT PROFILE MODAL -->
 
     <div class="modal" id="edit-profile-modal">
       <div class="modal__container">
@@ -125,7 +146,12 @@
               id="edit-name"
               placeholder="Type your name"
               class="modal__input"
+              required
+              minlength="2"
+              maxlength="40"
             />
+            <span class="edit-name-error modal__input-error"></span>
+
             <label for="describe-yourself" class="modal__label"
               >Description</label
             >
@@ -134,7 +160,12 @@
               id="describe-yourself"
               placeholder="Describe yourself"
               class="modal__input"
+              required
+              minlength="2"
+              maxlength="200"
             />
+            <span class="describe-yourself-error modal__input-error"></span>
+
             <button class="modal__save-button" type="submit">Save</button>
           </div>
         </form>
@@ -149,6 +180,7 @@
       </div>
     </div>
 
+    <script src="./scripts/validation.js"></script>
     <script src="./scripts/index.js"></script>
   </body>
 </html>

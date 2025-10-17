@@ -1,3 +1,5 @@
 {
-  "liveServer.settings.port": 5501
+  "liveServer.settings.port": 5501,
+  "liveServer.settings.CustomBrowser": "Comet",
+  "liveServer.settings.AdvanceCustomBrowserCmdLine": "/Applications/Comet.app/Contents/MacOS/Comet"
 }
