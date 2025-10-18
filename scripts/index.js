@@ -160,7 +160,6 @@ function getCardElement(data) {
   const cardLikeBtn = cardElement.querySelector(".card__like-button");
 
   cardLikeBtn.addEventListener("click", () => {
-    cardLikeBtn.classList.toggle("card__like-button");
     cardLikeBtn.classList.toggle("card__like-button-clicked");
   });
 
@@ -179,16 +178,25 @@ function getCardElement(data) {
   return cardElement;
 }
 
+/* ------------ RESET ERROR MESSAGES FUNCTION ------------ */
+
+const resetValidation = (formSelector, inputList, settings) => {
+  inputList.forEach((inputSelector) => {
+    hideInputError(formSelector, inputSelector, settings);
+  });
+};
+
 /* ------------ EDIT PROFILE FUNCTION ------------ */
 
 function editProfileSubmit() {
   profileName.textContent = editProfileNameInput.value;
   profileDescription.textContent = editProfileDescriptionInput.value;
+  resetValidation(editProfileForm, editProfileInputs, settings);
 }
 
 /* ------------- NEW CARD FUNCTION --------------- */
 
-function newCardPost(evt) {
+function openNewCardPost(evt) {
   evt.preventDefault();
   openModal(newPostModal);
 }
@@ -206,11 +214,6 @@ editProfileBtn.addEventListener("click", () => {
   openModal(editProfileModal);
   editProfileNameInput.value = profileName.textContent;
   editProfileDescriptionInput.value = profileDescription.textContent;
-  toggleButtonState(
-    editProfileInputs,
-    editProfileForm.querySelector(".modal__save-button"),
-    settings
-  );
 });
 
 editProfileForm.addEventListener("submit", (evt) => {
@@ -221,21 +224,12 @@ editProfileForm.addEventListener("submit", (evt) => {
 
 editProfileCloseBtn.addEventListener("click", () => {
   closeModal(editProfileModal);
-  toggleButtonState(
-    editProfileInputs,
-    editProfileForm.querySelector(".modal__save-button"),
-    settings
-  );
-  editProfileInputs.forEach((input) =>
-    hideInputError(editProfileForm, input, settings)
-  );
 });
 
 /*----------- NEW POST MODAL OPEN/CLOSE/SUBMIT -------- */
 
 newPostBtn.addEventListener("click", (evt) => {
-  newCardPost(evt);
-  toggleButtonState(newPostInputs, newPostSaveBtn, settings);
+  openNewCardPost(evt);
 });
 
 newPostForm.addEventListener("submit", (evt) => {
@@ -253,7 +247,6 @@ newPostForm.addEventListener("submit", (evt) => {
   cardsContainer.prepend(newCard);
 
   newPostForm.reset();
-  toggleButtonState(newPostInputs, newPostSaveBtn, settings);
   closeModal(newPostModal);
 });
 
