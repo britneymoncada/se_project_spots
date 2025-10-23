@@ -183,14 +183,22 @@
     font-size: 16px;
     margin-bottom: 8px;
   }
-
-  .modal__link {
-    max-width: 288px;
-  }
 }
 
 @media screen and (max-width: 360px) {
   .modal__link {
     max-width: 288px;
+  }
+
+  .modal__preview-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .modal__preview-close {
+    position: relative;
+    top: -8px;
+    left: calc(88%);
   }
 }

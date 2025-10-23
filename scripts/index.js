@@ -80,7 +80,7 @@ const cardPreviewClose = cardPreviewModal.querySelector(
 const cardPreviewModalImage = cardPreviewModal.querySelector(".modal__link");
 const cardPreviewCaption = cardPreviewModal.querySelector(".modal__caption");
 
-/*---------- CARD INPUTS FOR TOGGLE -----------*/
+/*---------- CARD INPUTS -----------*/
 
 const editProfileInputs = Array.from(
   editProfileForm.querySelectorAll(".modal__input")
@@ -230,12 +230,11 @@ editProfileCloseBtn.addEventListener("click", () => {
 
 newPostBtn.addEventListener("click", (evt) => {
   openNewCardPost(evt);
+  newPostSaveBtn.disabled = true;
 });
 
 newPostForm.addEventListener("submit", (evt) => {
   evt.preventDefault();
-
-  console.log("card created");
 
   const data = {
     name: imageCaption.value.trim(),
@@ -247,6 +246,7 @@ newPostForm.addEventListener("submit", (evt) => {
   cardsContainer.prepend(newCard);
 
   newPostForm.reset();
+
   closeModal(newPostModal);
 });
 
