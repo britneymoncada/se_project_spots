@@ -246,13 +246,14 @@ newPostForm.addEventListener("submit", (evt) => {
   cardsContainer.prepend(newCard);
 
   newPostForm.reset();
+  toggleButtonState(newPostInputs, newPostSaveBtn, settings);
 
   closeModal(newPostModal);
 });
 
 newPostCloseBtn.addEventListener("click", () => {
   closeModal(newPostModal);
-  toggleButtonState(newPostInputs, newPostSaveBtn, settings);
+  button.disabled = true;
 });
 
 // ==== 6. INITIAL RENDERING ==== //

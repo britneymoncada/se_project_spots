@@ -30,3 +30,7 @@ CSS3 – Styling and responsiveness
 
 Figma – Wireframing and layout design
 
+## Project Pitch Video
+
+Check out [this video](https://drive.google.com/file/d/1Hz47UYVtBd17UVJyiXG2-EWRXKJrXB9B/view?usp=drive_link), where I describe my
+project and some challenges I faced while building it.
